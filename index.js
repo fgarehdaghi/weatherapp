@@ -26,6 +26,9 @@ function showTemp(response) {
   writtenCity.innerHTML = `${cityNames}`;
   let tempCity = document.querySelector("#celdegree");
   tempCity.innerHTML = `${temperatureElement}`;
+  let weatherDes = response.data.weather[0].description;
+  let descriptionWe = document.querySelector(".partly");
+  descriptionWe.innerHTML = `${weatherDes}`;
 }
 //givecitynamefunc
 function giveCityName(event) {
